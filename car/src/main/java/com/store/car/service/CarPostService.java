@@ -8,7 +8,7 @@ import java.util.List;
 @Service
 public interface CarPostService {
 
-    List<CarPostDTO> newPostDetails (CarPostDTO carPostDTO);
+    void newPostDetails (CarPostDTO carPostDTO);
 
     List<CarPostDTO> getCarSales();
 
