@@ -29,7 +29,7 @@ public class KafkaProducerConfiguration {
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootStrapServer);
         configProps.put(JsonSerializer.ADD_TYPE_INFO_HEADERS, false);
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, com.fasterxml.jackson.databind.JsonSerializer.class.getName());
+        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class.getName());
 
         return  new DefaultKafkaProducerFactory<>(configProps);
     }
